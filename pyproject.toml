@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "system-vulnerability-checklist"
+version = "1.0.0"
+description = "Read-only defensive endpoint security checklist and reporting tool"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Student Security Project" }]
+dependencies = []
+
+[project.scripts]
+sysaudit = "sysaudit.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
